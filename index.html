@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Story Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="dashboard">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <h1>⚡ Story AI</h1>
+        <p>Create dynamic stories</p>
+
+        <input type="text" id="genre" placeholder="Genre" />
+        <input type="text" id="mood" placeholder="Mood" />
+        <input type="text" id="character_name" placeholder="Character Name" />
+        <input type="text" id="character_role" placeholder="Character Role" />
+        <input type="text" id="setting" placeholder="Setting" />
+        <input type="text" id="goal" placeholder="Goal" />
+        <input type="text" id="conflict" placeholder="Conflict" />
+        <input type="text" id="ending_type" placeholder="Ending Type" />
+        <input type="text" id="plot_twist" placeholder="Plot Twist" />
+
+        <select id="story_length">
+          <option>Short</option>
+          <option selected>Medium</option>
+          <option>Long</option>
+        </select>
+
+        <button onclick="generateStory()">Generate Story</button>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-panel">
+        <div class="top-bar">
+          <h2>Generated Story</h2>
+        </div>
+
+        <div class="output-box">
+          <pre id="result">
+Your AI generated title, story and summary will appear here...</pre
+          >
+        </div>
+      </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>

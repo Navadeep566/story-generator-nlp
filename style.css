@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #0a0f1f;
+  min-height: 100vh;
+  color: white;
+}
+
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+
+.sidebar {
+  width: 340px;
+  background: #111827;
+  padding: 30px 25px;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 20px rgba(0, 140, 255, 0.08);
+}
+
+.sidebar h1 {
+  font-size: 30px;
+  margin-bottom: 8px;
+  color: #38bdf8;
+}
+
+.sidebar p {
+  color: #94a3b8;
+  margin-bottom: 25px;
+}
+
+.sidebar input,
+.sidebar select {
+  width: 100%;
+  padding: 13px;
+  margin-bottom: 14px;
+  border: none;
+  border-radius: 12px;
+  background: #1e293b;
+  color: white;
+  outline: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.sidebar input:focus,
+.sidebar select:focus {
+  background: #334155;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.4);
+}
+
+.sidebar button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 8px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sidebar button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(0, 114, 255, 0.45);
+}
+
+/* Main Panel */
+
+.main-panel {
+  flex: 1;
+  padding: 30px;
+}
+
+.top-bar {
+  background: #111827;
+  padding: 20px 25px;
+  border-radius: 18px;
+  margin-bottom: 25px;
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.08);
+}
+
+.top-bar h2 {
+  color: #38bdf8;
+}
+
+.output-box {
+  background: #111827;
+  height: calc(100vh - 140px);
+  padding: 25px;
+  border-radius: 20px;
+  overflow-y: auto;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.08);
+}
+
+pre {
+  white-space: pre-wrap;
+  line-height: 1.8;
+  font-size: 15px;
+  color: #e5e7eb;
+}
+
+/* Scrollbar */
+
+.output-box::-webkit-scrollbar {
+  width: 8px;
+}
+
+.output-box::-webkit-scrollbar-thumb {
+  background: #38bdf8;
+  border-radius: 10px;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .output-box {
+    height: auto;
+    min-height: 500px;
+  }
+}
